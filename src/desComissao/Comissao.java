@@ -19,7 +19,7 @@ public class Comissao {
         }
         if (comissao >100000) {
             salario = salario + 5000;
-            System.out.println("O seu salario R$" + salario);
+            System.out.println("O seu salario é R$" + salario);
         }
     }
 }
