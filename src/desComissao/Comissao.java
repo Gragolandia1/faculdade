@@ -1,6 +1,8 @@
 package desComissao;
 import java.util.Scanner;
 
+//Um calculo de comissão com base no valor total de vendas.
+
 public class Comissao {
     public static void main(String[] args) {
         int salario = 2000;
