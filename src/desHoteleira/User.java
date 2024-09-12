@@ -18,13 +18,13 @@ public class User extends Funcionario {
         do {
             System.out.println("DIGITE O SEU TURNO");
             System.out.println("M - Matutino");
-            System.out.println("Z - Vespertino");
+            System.out.println("V - Vespertino");
             System.out.println("N - Noturno");
             turno = (scanner.next().charAt(0));
-            if (turno != 'M' && turno != 'Z' && turno != 'N') {
+            if (turno != 'M' && turno != 'V' && turno != 'N') {
                 System.out.println("DIGITE O TURNO CORRETAMENTE");
             }
-        } while (turno != 'M' && turno != 'Z' && turno != 'N');
+        } while (turno != 'M' && turno != 'V' && turno != 'N');
         user.setTurno(turno);
 
         do {
