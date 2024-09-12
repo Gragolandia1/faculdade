@@ -3,6 +3,7 @@ package desHoteleira;
 public class Funcionario {
     private int codigo;
     private int horasTrabalhadas;
+
     private char turno;
     private char categoria;
 
@@ -51,7 +52,6 @@ public class Funcionario {
     public void setValorHT(double valorHT) {
         this.valorHT = valorHT;
     }
-
 
     public int getCodigo() {
         return codigo;
