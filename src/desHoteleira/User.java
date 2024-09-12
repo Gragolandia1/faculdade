@@ -1,4 +1,5 @@
 package desHoteleira;
+import java.text.Format;
 import java.util.Scanner;
 
 public class User extends Funcionario {
@@ -55,14 +56,14 @@ public class User extends Funcionario {
 
         user.setSalarioInicial(user.getHorasTrabalhadas() * user.getValorHT());
 
-        if (user.getSalarioInicial() > 1200) {
-            user.setAuxAlimentacao(user.getSalarioInicial() * 0.15);
-        }
-        if (user.getSalarioInicial() <= 1200) {
-            user.setAuxAlimentacao(user.getSalarioInicial() * 0.20);
-        }
         if (user.getSalarioInicial() <= 800) {
             user.setAuxAlimentacao(user.getSalarioInicial() * 0.25);
+        }
+        if (user.getSalarioInicial() >= 800 && user.getSalarioInicial() <= 1200) {
+            user.setAuxAlimentacao(user.getSalarioInicial() * 0.20);
+        }
+        if (user.getSalarioInicial() > 1200) {
+            user.setAuxAlimentacao(user.getSalarioInicial() * 0.15);
         }
 
         user.setSalarioFinal(user.getSalarioInicial() + user.getAuxAlimentacao());
@@ -71,7 +72,7 @@ public class User extends Funcionario {
         System.out.println("Numero de horas trabalhadas = " +user.getHorasTrabalhadas());
         System.out.println("Valor da hora trabalhada = " +user.getValorHT());
         System.out.println("Salario inicial = " +user.getSalarioInicial());
-        System.out.println("Auxilio alimentacao = " +user.getAuxAlimentacao());
+        System.out.println("Auxilio alimentacao = " + String.format("%.2f", user.getAuxAlimentacao()));
         System.out.println("Seu salario final = " +user.getSalarioFinal());
 
 
