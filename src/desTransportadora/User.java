@@ -44,17 +44,17 @@ public class User extends Transportadora {
 
         System.out.println("INFORME O NUMERO DE PEÇAS QUE SERÃO ENVIADAS");
         user.setNumeroPecas(scanner.nextInt());
-        if (user.getNumeroPecas() < 1000 & user.getEscRegiao() == 1) {
+        if (user.getNumeroPecas() < 1000 && user.getEscRegiao() == 1) {
             user.setValorFretePecas(user.getNumeroPecas());
-        } else if (user.getNumeroPecas() > 1000 & user.getEscRegiao() == 1) {
+        } else if (user.getNumeroPecas() > 1000 && user.getEscRegiao() == 1) {
             user.setValorFretePecas(((user.getNumeroPecas() - 1000) * 0.90 + 1000));
-        } else if (user.getNumeroPecas() < 1000 & user.getEscRegiao() == 2) {
+        } else if (user.getNumeroPecas() < 1000 && user.getEscRegiao() == 2) {
             user.setValorFretePecas(user.getNumeroPecas() * 1.20);
-        } else if (user.getNumeroPecas() > 1000 & user.getEscRegiao() == 2) {
+        } else if (user.getNumeroPecas() > 1000 && user.getEscRegiao() == 2) {
             user.setValorFretePecas(((user.getNumeroPecas() - 1000) * 1.056 + (1000 * 1.20)));
-        } else if (user.getNumeroPecas() < 1000 & user.getEscRegiao() == 3) {
+        } else if (user.getNumeroPecas() < 1000 && user.getEscRegiao() == 3) {
             user.setValorFretePecas(user.getNumeroPecas() * 1.30);
-        } else if (user.getNumeroPecas() > 1000 & user.getEscRegiao() == 3) {
+        } else if (user.getNumeroPecas() > 1000 && user.getEscRegiao() == 3) {
             user.setValorFretePecas(((user.getNumeroPecas() - 1000) * 1.131 + (1000 * 1.30)));
         } else {
             System.out.println("DIGITE NOVAMENTE");
