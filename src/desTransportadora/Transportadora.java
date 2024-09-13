@@ -1,63 +1,77 @@
 package desTransportadora;
-import java.util.Scanner;
 
 public class Transportadora {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    private int distancia;
+    private int escRegiao;
+    private int numeroPecas;
+    private int taxaRastreamento;
 
-        int taxaRastreamento = 0;
+    private double valorFretePecas;
+    private double precoCombustivel;
+    private double freteQuilometro;
+    private double total;
 
-        double valorFretePecas = 0;
+    public double getTotal() {
+        return total;
+    }
 
-        double precoCombustivel = 6.13;
+    public void setTotal(double total) {
+        this.total = total;
+    }
 
-        System.out.println("DESEJA UTILIZAR O RASTREAMENTO?");
-        System.out.println("S = Sim");
-        System.out.println("N = Nao");
-        System.out.println("SERA COBRADO UMA TAXA DE R$200 CASO UTILIZE");
-        String rastreamento = scanner.next();
-        if (rastreamento.equals("S")) {
-            taxaRastreamento = 200;
-        }else if (rastreamento.equals("N")) {
-            taxaRastreamento = 0;
-        } else {
-            System.out.println("DIGITE NOVAMENTE");
-            return;
-        }
+    public double getFreteQuilometro() {
+        return freteQuilometro;
+    }
 
-        System.out.println("ESCOLHA A SUA REGIAO");
-        System.out.println("1 - SUL");
-        System.out.println("2 - SUDESTE");
-        System.out.println("3 - CENTRO-OESTE");
-        String escRegiao = scanner.next();
+    public void setFreteQuilometro(double freteQuilometro) {
+        this.freteQuilometro = freteQuilometro;
+    }
 
-        System.out.println("INFORME O NUMERO DE PEÇAS QUE SERÃO ENVIADAS");
-        int numPecas = scanner.nextInt();
-        if (numPecas < 1000 & escRegiao.equals("1")) {
-            valorFretePecas = numPecas;
-        } else if (numPecas > 1000 & escRegiao.equals("1")) {
-            valorFretePecas = ((numPecas - 1000) * 0.90 + 1000);
-        } else if (numPecas < 1000 & escRegiao.equals("2")) {
-            valorFretePecas = numPecas * 1.20;
-        } else if (numPecas > 1000 & escRegiao.equals("2")) {
-            valorFretePecas = ((numPecas - 1000) * 1.056 + (1000 * 1.20));
-        } else if (numPecas < 1000 & escRegiao.equals("3")) {
-            valorFretePecas = numPecas * 1.30;
-        } else if (numPecas > 1000 & escRegiao.equals("3")) {
-            valorFretePecas = ((numPecas - 1000) * 1.131 + (1000 * 1.30));
-        } else {
-            System.out.println("DIGITE NOVAMENTE");
-            return;
-        }
+    public int getDistancia() {
+        return distancia;
+    }
 
-        System.out.println("INFORME A DISTANCIA");
-        double freteQuilometro = scanner.nextInt();
-        freteQuilometro = freteQuilometro * precoCombustivel;
+    public void setDistancia(int distancia) {
+        this.distancia = distancia;
+    }
 
-        System.out.println("Taxa do rastreamento R$" +taxaRastreamento);
-        System.out.println("Valor do frete pelas peças R$" +valorFretePecas);
-        System.out.println("Valor do frete por quilometro R$" + freteQuilometro);
-        double total = taxaRastreamento + valorFretePecas + freteQuilometro;
-        System.out.println("O valor total do frete é de R$" +total);
+    public int getNumeroPecas() {
+        return numeroPecas;
+    }
+
+    public void setNumeroPecas(int numeroPecas) {
+        this.numeroPecas = numeroPecas;
+    }
+
+    public int getEscRegiao() {
+        return escRegiao;
+    }
+
+    public void setEscRegiao(int escRegiao) {
+        this.escRegiao = escRegiao;
+    }
+
+    public double getPrecoCombustivel() {
+        return precoCombustivel;
+    }
+
+    public void setPrecoCombustivel(double precoCombustivel) {
+        this.precoCombustivel = precoCombustivel;
+    }
+
+    public double getValorFretePecas() {
+        return valorFretePecas;
+    }
+
+    public void setValorFretePecas(double valorFretePecas) {
+        this.valorFretePecas = valorFretePecas;
+    }
+
+    public int getTaxaRastreamento() {
+        return taxaRastreamento;
+    }
+
+    public void setTaxaRastreamento(int taxaRastreamento) {
+        this.taxaRastreamento = taxaRastreamento;
     }
 }
