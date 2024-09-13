@@ -71,5 +71,6 @@ public class User extends Transportadora {
         System.out.println("Valor do frete pelas peças R$" +user.getValorFretePecas());
         System.out.println("Valor do frete por quilometro R$" + user.getFreteQuilometro());
         System.out.println("O valor total do frete é de R$" + user.getTotal());
+        System.out.println();
     }
 }
