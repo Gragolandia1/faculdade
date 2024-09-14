@@ -1,7 +1,9 @@
 package desComissao;
 
 public class Comissao {
+
     private int salario;
+
     private double comissao;
 
     public double getComissao() {

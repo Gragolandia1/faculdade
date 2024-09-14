@@ -1,6 +1,7 @@
 package desTransportadora;
 
 public class Transportadora {
+
     private int distancia;
     private int escRegiao;
     private int numeroPecas;

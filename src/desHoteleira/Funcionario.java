@@ -1,6 +1,7 @@
 package desHoteleira;
 
 public class Funcionario {
+
     private int codigo;
     private int horasTrabalhadas;
 
